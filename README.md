@@ -1,4 +1,4 @@
-# SeleniumTask2-ShoppingWebsite
+# Selenium Task 2 - Shopping Website
 
 The aim of this repo is to demonstrate the use of cucumber and selenium. The task is to automate front end testing of a demo site.
 
