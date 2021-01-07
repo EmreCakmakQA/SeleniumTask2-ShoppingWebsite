@@ -61,7 +61,10 @@ public class SearchItem {
 		
 		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[2]/input")).sendKeys(email);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]")).click();
+		Thread.sleep(3000);
+		
+		// Populate customer form 
 		driver.findElement(By.xpath("//*[@id=\"id_gender1\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]")).click();
