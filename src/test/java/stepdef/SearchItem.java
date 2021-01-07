@@ -41,17 +41,21 @@ public class SearchItem {
 	@When("^I search for a dress$")
 	public void i_search_for_a_dress() throws InterruptedException {
 		driver.findElement(By.id("search_query_top")).sendKeys(searchTerm);
-	    driver.findElement(By.id("search_query_top")).sendKeys(Keys.ENTER);
-	    driver.findElement(By.cssSelector(".product_img_link")).click();
-	    Thread.sleep(3000);
-	    
+		driver.findElement(By.id("search_query_top")).sendKeys(Keys.ENTER);
+		driver.findElement(By.cssSelector(".product_img_link")).click();
+		Thread.sleep(3000);
+
 	}
 
 	@Then("^I can add it to my cart$")
 	public void i_can_add_it_to_my_cart() throws InterruptedException {
-		driver.findElement(By.cssSelector(".exclusive added")).click();
+		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[4]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.cssSelector(".button-medium")).click();
+		driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]/span")).click();
+		Thread.sleep(2000);
 	}
 
 }
