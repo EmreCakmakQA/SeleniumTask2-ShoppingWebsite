@@ -18,6 +18,8 @@ public class SearchItem {
 	private static WebDriver driver;
 	private static String URL = "http://automationpractice.com/index.php";
 	private static String searchTerm = "Dress";
+	private static String email = "8emadeldean.hamdh@energyce.cyou";
+	private static String password = "guest";
 
 	@Before
 	public void setup() {
@@ -55,7 +57,19 @@ public class SearchItem {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]/span")).click();
+		Thread.sleep(3500);
+		
+		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[1]/form/div/div[2]/input")).sendKeys(email);
 		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"id_gender1\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]")).click();
+		
+		
+		Thread.sleep(3500);
+		
+		
 	}
 
 }
